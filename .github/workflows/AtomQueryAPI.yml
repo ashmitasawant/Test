@@ -22,7 +22,7 @@ jobs:
         method: 'POST'
         contentType: 'application/json'
         data: '{"QueryFilter" : {"expression" :{"argument" : ["ATOM"], "operator" : "EQUALS", "property" : "type"}}}'
-        username: BOOMI_TOKEN.kartik.dashora@neosalpha.com
-        password: f0f0c5d7-bd36-4aea-b0b9-4950a7e8c976
+        username: ${{ secrets.BOOMI_USERNAME }}
+        password: ${{ secrets.BOOMI_PASSWORD }}
     - name: Show Response
       run: echo ${{ steps.myRequest.outputs.response }}
