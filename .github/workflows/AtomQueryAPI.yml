@@ -14,6 +14,7 @@ jobs:
   apiCall:
     runs-on: ubuntu-latest
     env:
+      name: DevelopmentEnv
       username: ${{ secrets.BOOMI_USERNAME }}
       password: ${{ secrets.BOOMI_PASSWORD }}
     steps:
