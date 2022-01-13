@@ -13,15 +13,14 @@ on:
 jobs:
   apiCall:
     runs-on: ubuntu-latest
-    
-    steps:
-    - uses: actions/checkout@v2
-    - name: SetVariables
-      env:
+    env:
        name: DevelopmentEnv
        username: ${{ secrets.BOOMI_USERNAME }}
        password: ${{ secrets.BOOMI_PASSWORD }}
-       run: echo "Success"
+       
+    steps:
+    - name: SetVariables
+      run: echo "The API key is:${{env.username}}"
     
     - name: AtomQuery
       id: myRequest
