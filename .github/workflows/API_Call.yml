@@ -18,7 +18,9 @@ jobs:
       id: myRequest
       uses: fjogeleit/http-request-action@master
       with:
-        url: 'https://gorest.co.in/public/v1/users'
-        method: 'GET'
+        url: 'https://api.boomi.com/api/rest/v1/neosalpha-SSL1AK/Atom/query'
+        method: 'POST'
+        username: ${{ secrets.Boomi_User}}
+        password: ${{ secrets.Boomi_Password }}
     - name: Show Response
       run: echo ${{ steps.myRequest.outputs.response }}
