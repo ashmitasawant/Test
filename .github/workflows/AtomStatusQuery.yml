@@ -16,7 +16,6 @@ jobs:
     env:
        name: DevelopmentEnv
        username: ${{ secrets.BOOMI_USERNAME }}
-       password: ${{ secrets.BOOMI_PASSWORD }}
        
     steps:
     - name: SetVariables
