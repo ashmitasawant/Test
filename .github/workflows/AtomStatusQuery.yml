@@ -22,16 +22,3 @@ jobs:
     - name: SetVariables
       run: echo "The API key is:${{env.username}}"
     
-    - name: AtomQuery
-      id: myRequest
-      uses: fjogeleit/http-request-action@master
-      with:
-        url: 'https://api.boomi.com/api/rest/v1/neosalpha-SSL1AK/Atom/query'
-        method: 'POST'
-        contentType: 'application/json'
-        data: '{"QueryFilter" : {"expression" :{"argument" : ["ATOM"], "operator" : "EQUALS", "property" : "type"}}}'
-        username: ${{env.username}}
-        password: ${{env.password}}
-        
-    - name: Show Response
-      run: echo ${{ steps.myRequest.outputs.response }}
