@@ -20,7 +20,7 @@ jobs:
       with:
         url: 'https://api.boomi.com/api/rest/v1/neosalpha-SSL1AK/Atom/query'
         method: 'POST'
-        username: ${{ secrets.Boomi_User}}
-        password: ${{ secrets.Boomi_Password }}
+        username: neosalpha-SSL1AK.84NL2
+        password: 5399c49e-f7af-4cc5-8ed4-e08d6ac4dd7e
     - name: Show Response
       run: echo ${{ steps.myRequest.outputs.response }}
