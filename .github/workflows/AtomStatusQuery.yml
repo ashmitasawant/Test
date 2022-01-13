@@ -21,6 +21,7 @@ jobs:
        name: DevelopmentEnv
        username: ${{ secrets.BOOMI_USERNAME }}
        password: ${{ secrets.BOOMI_PASSWORD }}
+       run: echo "Success"
     
     - name: AtomQuery
       id: myRequest
