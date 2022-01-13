@@ -13,11 +13,14 @@ on:
 jobs:
   apiCall:
     runs-on: ubuntu-latest
-    env:
-      name: DevelopmentEnv
-      username: ${{ secrets.BOOMI_USERNAME }}
-      password: ${{ secrets.BOOMI_PASSWORD }}
+    
     steps:
+    - name: SetVariables
+      env:
+       name: DevelopmentEnv
+       username: ${{ secrets.BOOMI_USERNAME }}
+       password: ${{ secrets.BOOMI_PASSWORD }}
+    
     - name: AtomQuery
       id: myRequest
       uses: fjogeleit/http-request-action@master
