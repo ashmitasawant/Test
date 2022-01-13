@@ -8,12 +8,14 @@ on:
   workflow_dispatch:
     # Inputs the workflow accepts.
     inputs:
-      name:
+      name: 
         type: choice
         description: Who to greet
         options: 
-        - monalisa
-        - cschleiden
+        - Ashmita
+        - Kartik
+        - Abhishek
+        - Shreya
       message:
         required: true
       use-emoji:
