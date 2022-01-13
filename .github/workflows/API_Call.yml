@@ -18,8 +18,9 @@ jobs:
       id: myRequest
       uses: fjogeleit/http-request-action@master
       with:
-        url: 'https://api.boomi.com/api/rest/v1/neosalpha-SSL1AK/Atom/query'
+        url: 'https://c01-sg.integrate.boomi.com/ws/rest/personDetails/v1/personDetails/'
         method: 'POST'
-        authorization: Basic Qk9PTUlfVE9LRU4ua2FydGlrLmRhc2hvcmFAbmVvc2FscGhhLmNvbTpmMGYwYzVkNy1iZDM2LTRhZWEtYjBiOS00OTUwYTdlOGM5NzY=
+        username: trainingashmitasawant-D9P8J7.YG1FA4
+        password: 9bfd395e-361d-41ad-8107-154f5938402f
     - name: Show Response
       run: echo ${{ steps.myRequest.outputs.response }}
