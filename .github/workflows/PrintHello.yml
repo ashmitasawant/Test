@@ -19,8 +19,7 @@ on:
       use-emoji:
         type: boolean
         description: Include 🎉🤣 emojis
-      environment:
-        type: environment
+      
 
 jobs:
   greet:
