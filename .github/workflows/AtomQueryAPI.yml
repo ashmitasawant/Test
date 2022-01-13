@@ -12,7 +12,10 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   apiCall:
-    runs-on: ubuntu-latest 
+    runs-on: ubuntu-latest
+    env:
+      username: ${{ secrets.BOOMI_USERNAME }}
+      password: ${{ secrets.BOOMI_PASSWORD }}
     steps:
     - name: AtomQuery
       id: myRequest
@@ -22,7 +25,8 @@ jobs:
         method: 'POST'
         contentType: 'application/json'
         data: '{"QueryFilter" : {"expression" :{"argument" : ["ATOM"], "operator" : "EQUALS", "property" : "type"}}}'
-        username: ${{env.secrets.BOOMI_USERNAME}}
-        password: ${{env.secrets.BOOMI_PASSWORD}}
+        username: ${{env.username}}
+        password: ${{env.password}}
+        
     - name: Show Response
       run: echo ${{ steps.myRequest.outputs.response }}
