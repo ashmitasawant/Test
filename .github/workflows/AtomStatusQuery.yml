@@ -13,15 +13,16 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   apiCall:
+    environment: Dev
+    env:
+        MY_USERNAME: ${{secrets.MY_USERNAME}}
     runs-on: ubuntu-latest
-    
+   
        
     steps:
    
     - name: ShowVariables
-      env:
-        MY_USERNAME: ${{secrets.MY_USERNAME}}
-      run: echo $MY_USERNAME
+      run: echo ${{env.MY_USERNAME}}
     
       
 
