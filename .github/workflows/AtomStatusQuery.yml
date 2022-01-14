@@ -15,9 +15,10 @@ jobs:
     runs-on: ubuntu-latest
     env:
        name: DevelopmentEnv
-       username: ${{ github.env.secrets.MY_USERNAME }}
+       username: ${{secrets.MY_USERNAME }}
+       
        
     steps:
     - name: SetVariables
-      run: echo "The API key is:${{env.username}}"
+      run: echo "The API key is:${env.username}"
     
