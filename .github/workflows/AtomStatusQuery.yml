@@ -20,8 +20,8 @@ jobs:
     - uses: actions/checkout@v2
     - name: ShowVariables
       env:
-        name: Dev 
-        MY_USERNAME: ${{secrets.MY_USERNAME}}
+        env_name: Dev 
+        MY_USERNAME: ${{env.env_name.secrets.MY_USERNAME}}
       run: echo ${MY_USERNAME}
     
       
