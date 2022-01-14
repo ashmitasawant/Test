@@ -1,21 +1,25 @@
-name: Workflows with large secrets
 
+# This is a basic workflow that is manually triggered
+
+name: Manual workflow to call an API
+
+# Controls when the action will run. Workflow runs when manually triggered using the UI
+# or API.
 on:
   workflow_dispatch:
+    # Inputs the workflow accepts.
+    
 
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  my-job:
-    name: My Job
+  apiCall:
     runs-on: ubuntu-latest
+    env:
+       name: DevelopmentEnv
+       username: ${{ secrets.MY_USERNAME }}
+       run: echo "$username"
+       
     steps:
-      - uses: actions/checkout@v2
-      - name: Decrypt large secret
-        run: echo "Hello"
-        env:
-          LARGE_SECRET_PASSPHRASE: ${{ secrets.MY_USERNAME }}
-      # This command is just an example to show your secret being printed
-      # Ensure you remove any print statements of your secrets. GitHub does
-      # not hide secrets that use this workaround.
-      - name: Test printing your secret (Remove this step in production)
-        run: cat $HOME/secrets/MY_USERNAME.json# This is a basic workflow that is manually triggered
+    - name: SetVariables
+      run: echo "The API key is:${{env.username}}"
 
