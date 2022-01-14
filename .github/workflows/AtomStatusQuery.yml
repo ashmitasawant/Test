@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
        name: DevelopmentEnv
-       username: ${{ github.env.secrets.BOOMI_USERNAME }}
+       username: ${{ github.env.secrets.MY_USERNAME }}
        
     steps:
     - name: SetVariables
