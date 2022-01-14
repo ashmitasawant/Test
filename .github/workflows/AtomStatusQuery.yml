@@ -13,12 +13,15 @@ on:
 jobs:
   apiCall:
     runs-on: ubuntu-latest
-    env:
-       name: DevelopmentEnv
-       username: ${{secrets.MY_USERNAME }}
        
        
     steps:
-    - name: SetVariables
-      run: echo "The API key is:${env.username}"
+     - name: Hello world action
+       with: # Set the secret as an input
+        super_secret: ${{ secrets.MY_USERNAME }}
+       env: # Or as an environment variable
+          super_secret: ${{ secrets.MY_USERNAME }}
+          run: echo ${{secrets.MY_USERNAME}}
+     - name: SetVariables
+       run: echo "The API key is:${env.super_secret}"
     
