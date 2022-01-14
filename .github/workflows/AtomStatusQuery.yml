@@ -17,8 +17,8 @@ jobs:
     
        
     steps:
-    - name: SetVariables
-      env:
-       MY_USERNAME: ${{ secrets.MY_USERNAME }}
-      run: echo ${{ env.secrets.MY_USERNAME }}
+    - name: ShowVariables
+      run: echo ${{secrets.MY_USERNAME}}
+    
+      
 
