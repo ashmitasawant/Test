@@ -13,8 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Run.sh script
-      run: |
-           chmod +x .github/workflows/test.sh
-           show output
+      run: chmod +x .github/workflows/test.sh
+      
    
     
