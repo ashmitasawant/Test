@@ -13,4 +13,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Run.sh script
-      run: sh .github/workflows/test.sh
+      run: sh ./test.sh
