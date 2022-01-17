@@ -13,7 +13,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Run.sh script
-      run: chmod +x .github/workflows/test.sh
+      run: |
+           chmod +x .github/workflows/test.sh
+           show output
    
-    - name: Run linters
-    - uses: wearerequired/lint-action@v1
+    
