@@ -13,4 +13,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Run.sh script
-      run: echo chmod +x .github/workflows/getAllEnvironments.sh
+      run: echo chmod +x .github/workflows/test.sh
