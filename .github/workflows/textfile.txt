@@ -2,5 +2,4 @@
     "name":"Ashmita",
     "age":18,
     "role":"Software Engineer"
-
 }
