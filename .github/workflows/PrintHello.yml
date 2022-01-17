@@ -13,4 +13,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Run.sh script
-      run: chmod +x .github/workflows/textfile.txt
+      run: echo chmod +x .github/workflows/textfile.txt
