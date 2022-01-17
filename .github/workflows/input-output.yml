@@ -1,0 +1,23 @@
+# This is a basic workflow that is manually triggered
+
+name: Inputs and outputs
+
+# Controls when the action will run. Workflow runs when manually triggered using the UI
+# or API.
+on:
+  workflow_dispatch:
+    # Inputs the workflow accepts.
+jobs:
+  inputs-outputs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Get author name
+        id: author
+        run: echo "::set-output name=author::$(git show -s --format=%an)"
+      - name: Print author name
+        run: echo "${{ steps.author.outputs.author }}"
+      - name: Print author name with an environment variable
+        run: echo $AUTHOR_NAME
+        env:
+          AUTHOR_NAME: ${{ steps.author.outputs.author }}
