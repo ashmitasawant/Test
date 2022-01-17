@@ -13,4 +13,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Run.sh script
-      run: sh .boomicicd-cli/cli/scripts/bin/queryAtom.sh
+      run: sh ./Test.txt
