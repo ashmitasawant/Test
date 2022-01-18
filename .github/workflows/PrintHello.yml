@@ -9,16 +9,14 @@ on:
 jobs:
   job1:
     runs-on: ubuntu-latest
-    outputs:
-      output1: ${{ steps.runScript.outputs.test }}
 
     steps:
     - uses: actions/checkout@v2
     - name: Run.sh script
       id: runScript
       run: |
-           chmod +x .github/workflows/test.sh
-           .github/workflows/test.sh
+           chmod +x ./test.sh
+           ./test.sh
 
       
   
