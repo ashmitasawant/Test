@@ -15,8 +15,7 @@ jobs:
     - name: Run.sh script
       id: runScript
       run: |
-           chmod +x ./test.sh
-           ./test.sh
+           sh .github/workflows/test.sh
 
       
   
