@@ -7,14 +7,22 @@ name: Manual workflow
 on:
   workflow_dispatch:
 jobs:
-  runScript:
+  job1:
     runs-on: ubuntu-latest
+    outputs:
+      output1: ${{ steps.runScript.outputs.test }}
 
     steps:
     - uses: actions/checkout@v2
     - name: Run.sh script
       id: runScript
-      run: echo "::set-output name=result::$(chmod +x .github/workflows/getAllEnvironments.sh)"
+      run: echo "::set-output name=test::chmod +x .github/workflows/getAllEnvironments.sh"
+      
+  job2:
+    runs-on: ubuntu-latest
+    needs: job1
+    steps:
+      - run: echo ${{needs.job1.outputs.output1}}
     
   
            
