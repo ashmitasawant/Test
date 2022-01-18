@@ -1,3 +1,2 @@
 #!/bin/bash
-return 200
-set -x
+echo "Hello World"
