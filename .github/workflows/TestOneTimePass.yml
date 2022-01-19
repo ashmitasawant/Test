@@ -32,9 +32,11 @@ jobs:
         username: ${{env.MY_USERNAME}}
         password: ${{env.MY_PASSWORD}}
         
-    - name: Show Response
+    - name: Store Response
       id: showResponse
       env: 
           result: ${{ steps.password.outputs.response}}
-      run: echo $result
+     
+    - name: Show response
+      run: echo ${{steps.showResponse.env.result}}
       
