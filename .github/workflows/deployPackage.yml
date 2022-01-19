@@ -33,4 +33,4 @@ jobs:
         password: ${{env.BOOMI_PASSWORD}}
         
     - name: Show Response
-      run: ${{ steps.packageDeploy.outputs.response }} >> index.html
+      run: ${{ steps.packageDeploy.outputs.response }}
