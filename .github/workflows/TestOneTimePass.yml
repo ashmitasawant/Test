@@ -36,9 +36,8 @@ jobs:
       env: 
           result: ${{ steps.password.outputs.response}}
       id: showResponse
-      run: echo "Response is stored"
+      run: echo "Response is ${{result[1]}}"
       
-    - name: Show Response
-      run:  echo ${{env.result}}
+    
      
       
