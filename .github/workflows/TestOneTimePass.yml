@@ -34,6 +34,7 @@ jobs:
         
     - name: Show Response
       run: |
-            echo $output <<< ${{ steps.password.outputs.response}}
-            echo ${output}
+           outputVar = ${{ steps.password.outputs.response}}
+           echo $outputVar
+            
       
