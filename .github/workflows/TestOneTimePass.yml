@@ -14,7 +14,6 @@ jobs:
   apiCall:
     environment: Dev
     env:
-       result: ${{ steps.password.outputs.response}} 
        MY_USERNAME: ${{ secrets.MY_USERNAME }}
        MY_PASSWORD: ${{ secrets.MY_PASSWORD }}
     runs-on: ubuntu-latest
@@ -34,7 +33,9 @@ jobs:
         password: ${{env.MY_PASSWORD}}
         
     - name: Show Response
+      id: showResponse
+      env: 
+          result: ${{ steps.password.outputs.response}}
       run: |
-            echo ${{ steps.password.outputs.response}}
-            echo ${{env.result}}
+            echo ${{ steps.showResponse.result}}
       
