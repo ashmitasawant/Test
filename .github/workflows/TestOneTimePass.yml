@@ -35,8 +35,8 @@ jobs:
     - name: Store & Show Response
       id: showResponse
       env: 
-          result: ${{ steps.password.outputs.response}} > at.json
-      run: echo jq '.pass1' at.json
+          result: ${{ steps.password.outputs.response}}
+      run: echo ($result).*.pass1
       
     
      
