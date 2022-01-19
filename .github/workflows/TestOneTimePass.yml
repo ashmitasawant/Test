@@ -14,8 +14,8 @@ jobs:
   apiCall:
     environment: Dev
     env:
-       BOOMI_USERNAME: ${{ secrets.BOOMI_USERNAME }}
-       BOOMI_PASSWORD: ${{ secrets.BOOMI_PASSWORD }}
+       MY_USERNAME: ${{ secrets.MY_USERNAME }}
+       MY_PASSWORD: ${{ secrets.MY_PASSWORD }}
     runs-on: ubuntu-latest
     
        
@@ -29,8 +29,8 @@ jobs:
         method: 'POST'
         contentType: 'application/json'
         data: '{"pass1":"A089-Uh12-09TG-N7K4"}'
-        username: ${{env.BOOMI_USERNAME}}
-        password: ${{env.BOOMI_PASSWORD}}
+        username: ${{env.MY_USERNAME}}
+        password: ${{env.MY_PASSWORD}}
         
     - name: Show Response
       run: echo ${{ steps.password.outputs.response }}
