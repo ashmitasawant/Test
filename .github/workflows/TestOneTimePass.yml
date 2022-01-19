@@ -25,7 +25,7 @@ jobs:
       id: password
       uses: fjogeleit/http-request-action@master
       with:
-        url: 'https://api.boomi.com/api/rest/v1/neosalpha-SSL1AK/DeployedPackage'
+        url: 'https://c01-sg.integrate.boomi.com/ws/rest/onetimepass/v1/oneTimePass/'
         method: 'POST'
         contentType: 'application/json'
         data: '{"pass1":"A089-Uh12-09TG-N7K4"}'
