@@ -33,5 +33,5 @@ jobs:
         password: ${{env.MY_PASSWORD}}
         
     - name: Show Response
-      run: echo ${{ steps.password.outputs.response.response[1] }}
+      run: echo ${{ steps.password.outputs.response[1] }}
             
