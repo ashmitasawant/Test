@@ -39,5 +39,5 @@ jobs:
       run: echo "Response is stored"
      
     - name: Show response
-      run: echo ${{steps.showResponse.env.result}}
+      run: echo ${{steps.showResponse.result}}
       
