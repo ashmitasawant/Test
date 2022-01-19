@@ -1,0 +1,36 @@
+# This is a basic workflow that is manually triggered
+
+name: Manual workflow to test OneTimePassword
+
+# Controls when the action will run. Workflow runs when manually triggered using the UI
+# or API.
+on:
+  workflow_dispatch:
+    # Inputs the workflow accepts.
+    
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  apiCall:
+    environment: Dev
+    env:
+       BOOMI_USERNAME: ${{ secrets.BOOMI_USERNAME }}
+       BOOMI_PASSWORD: ${{ secrets.BOOMI_PASSWORD }}
+    runs-on: ubuntu-latest
+    
+       
+    steps:
+    
+    - name: Fetch OneTimePassword
+      id: password
+      uses: fjogeleit/http-request-action@master
+      with:
+        url: 'https://api.boomi.com/api/rest/v1/neosalpha-SSL1AK/DeployedPackage'
+        method: 'POST'
+        contentType: 'application/json'
+        data: '{"pass1":"A089-Uh12-09TG-N7K4"}'
+        username: ${{env.BOOMI_USERNAME}}
+        password: ${{env.BOOMI_PASSWORD}}
+        
+    - name: Show Response
+      run: echo ${{ steps.password.outputs.response }}
