@@ -36,6 +36,5 @@ jobs:
       id: showResponse
       env: 
           result: ${{ steps.password.outputs.response}}
-      run: |
-            echo ${{ steps.showResponse.result}}
+      run: echo ${{ steps.showResponse.result}}
       
