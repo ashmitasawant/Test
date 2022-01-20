@@ -36,7 +36,7 @@ jobs:
       id: showResponse
       env: 
           result: ${{ steps.password.outputs.response}}
-      run: echo "$result"  | jq '.pass1'"
+      run: echo "$result"  | jq '.pass1'
             
     
      
