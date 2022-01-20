@@ -1,33 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@ashmitasawant 
-notiz-dev
-/
-github-action-json-property
-Public
-generated from notiz-dev/github-action-template
-Code
-Issues
-Pull requests
-2
-Actions
-Projects
-Wiki
-Security
-Insights
-github-action-json-property/dist/index.js /
-@garygrossgarten
-garygrossgarten update config
-Latest commit c7a298f on Mar 11, 2020
- History
- 1 contributor
-406 lines (380 sloc)  12 KB
-   
 module.exports =
 /******/ (function(modules, runtime) { // webpackBootstrap
 /******/ 	"use strict";
@@ -434,16 +404,3 @@ module.exports = require("fs");
 /***/ })
 
 /******/ });
-© 2022 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-Loading complete
