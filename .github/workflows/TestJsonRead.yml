@@ -1,25 +1,17 @@
-name: "test"
-on: # rebuild any PRs and main branch changes
+name: Test JSON Read
+on:
   workflow_dispatch
 
 jobs:
-  test:
+  testJob:
+    name: Test
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - name: get name
-      id: name
-      uses: ./
-      with: 
-        path: 'TestJson.json'
-        prop_path: 'processName'
-    - run: echo ${{steps.name.outputs.prop}}        
-        
-    - name: get nested json property
-      id: get_json_property
-      uses: ./
-      with: 
-        path: 'TestJson.json'
-        prop_path: 'environmentId'
-      
-    - run: echo ${{steps.get_json_property.outputs.prop}}     
+      - name: Checkout
+        uses: actions/checkout@v2
+      - id: set_var
+        run: |
+          content=`cat ./TestJson.json`
+          echo "::set-output name=packageJson::$content"
+      - run: |
+          echo "${{fromJson(steps.set_var.outputs.packageJson).processName}}"
