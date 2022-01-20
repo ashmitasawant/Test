@@ -36,7 +36,7 @@ jobs:
       id: showResponse
       env: 
           result: ${{ steps.password.outputs.response}}
-      run:  echo "$result" | jq -c '.[] | select(.pass1 | contains("N7K4"))'
+      run:  echo "$result" | jq '.[0]'
       
     
      
