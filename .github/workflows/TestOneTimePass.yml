@@ -36,7 +36,7 @@ jobs:
       id: showResponse
       env: 
           result: ${{ steps.password.outputs.response}}
-      run: echo "${{ toJson(result) }}"
+      run: echo "${{ toJson(job) }}"
       
     
      
