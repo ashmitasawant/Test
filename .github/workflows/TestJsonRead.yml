@@ -14,4 +14,4 @@ jobs:
           content=`cat ./TestJson.json`
           echo "::set-output name=packageJson::$content"
       - run: |
-          echo "${{fromJson(steps.set_var.outputs.packageJson).processName}}"
+          echo "${{fromJson(steps.set_var.outputs.packageJson).processName[0]}}"
