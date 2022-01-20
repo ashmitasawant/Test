@@ -12,7 +12,7 @@ jobs:
       uses: ./
       with: 
         path: 'TestJson.json'
-        prop_path: 'name'
+        prop_path: 'processName'
     - run: echo ${{steps.name.outputs.prop}}        
         
     - name: get nested json property
@@ -20,6 +20,6 @@ jobs:
       uses: ./
       with: 
         path: 'TestJson.json'
-        prop_path: 'age'
+        prop_path: 'packageId'
 
     - run: echo ${{steps.get_json_property.outputs.prop}}     
