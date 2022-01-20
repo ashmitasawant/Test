@@ -36,9 +36,8 @@ jobs:
       id: showResponse
       env: 
           result: ${{ steps.password.outputs.response}}
-      run:  |
-            ONE_PASSWORD = $($result  | jq '.pass1')
-            echo "::set-output name=password::($ONE_PASSWORD)"
+      run: echo "PASSWORD=$result  | jq '.pass1'"
+            
     
      
       
