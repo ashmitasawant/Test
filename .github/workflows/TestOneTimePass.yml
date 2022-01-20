@@ -37,8 +37,8 @@ jobs:
       env: 
           result: ${{ steps.password.outputs.response}}
       run:  |
-            ONE_PASSWORD = $result  | jq '.pass1'
-            echo $ONE_PASSWORD
+            ONE_PASSWORD = $($result  | jq '.pass1')
+            echo "::set-output name=password::($ONE_PASSWORD)"
     
      
       
