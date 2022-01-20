@@ -36,8 +36,9 @@ jobs:
       id: showResponse
       env: 
           result: ${{ steps.password.outputs.response}}
-      run:  echo "$result" | jq '.pass1' >> $GITHUB_ENV
-      
+      run:  |
+            ONE_PASSWORD = $result  | jq '.pass1'
+            echo $ONE_PASSWORD
     
      
       
