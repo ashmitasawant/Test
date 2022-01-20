@@ -11,7 +11,7 @@ jobs:
     steps:
       - id: set-matrix
         run: |
-           JSON=$(cat .github/workflows/TestJson.json)
+           JSON=$(cat ./TestJson.json)
            echo "::set-output name=matrix::${JSON//'%'/'%25'}"
   job2:
     needs: job1
