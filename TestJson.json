@@ -1,4 +1,4 @@
-{
+[{
     "processName":"SubmissionTest",
     "packageId":"0a558e5f-69f2-460b-95e3-fe5ba308b1e7",
     "environmentId":"b3af1cf6-f33c-4539-bac5-e69073703311"
@@ -12,4 +12,4 @@
     "processName":"QuoteTest",
     "packageId":"a95c1b3a-34f9-44b4-8ce5-4f5e576b587e",
     "environmentId":"b3af1cf6-f33c-4539-bac5-e69073703311"
-}
+}]
