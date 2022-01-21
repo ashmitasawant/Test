@@ -12,6 +12,6 @@ jobs:
     - id: set-matrix
       run: |
         JSON=$(cat ./jsonArray.json)
-        echo "::set-output name=packageJson::($JSON).*.name"
+         echo $JSON | jq '.[].name'
 
  
