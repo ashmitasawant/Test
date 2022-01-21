@@ -1,7 +1,6 @@
 name: "We 🎔 Perl"
 on:
-  issues:
-    types: [opened, edited, milestoned]
+  workflow_dispatch
 
 jobs:
   seasonal_greetings:
