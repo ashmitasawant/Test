@@ -36,7 +36,7 @@ jobs:
     - name: Show Response  
       run: |
            $output = '${{ steps.myRequest.outputs.output }}' 
-           echo $($output.packageId)
+           echo $output
            
         
  
