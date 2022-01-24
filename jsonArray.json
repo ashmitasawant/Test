@@ -1,7 +1,14 @@
-[{
-	"name": "Ashmita",
-	"client_payload": "111"
-}, {
-	"name": "Abhishek",
-	"client_payload": "222"
-}]
+{
+    "@type": "PackagedComponent",
+    "packageId": "1a0daa6d-42cf-4b46-93ac-ce0ce7b92c82",
+    "packageVersion": "1.5",
+    "componentId": "0a558e5f-69f2-460b-95e3-fe5ba308b1e7",
+    "componentVersion": 1,
+    "componentType": "process",
+    "createdDate": "2022-01-24T07:05:38Z",
+    "createdBy": "vaibhav.soni@neosalpha.com",
+    "notes": "Package for deployment",
+    "deleted": false,
+    "shareable": false,
+    "fullyPubliclyConsumable": false
+}
