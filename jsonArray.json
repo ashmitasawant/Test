@@ -1,4 +1,4 @@
-{
+[{
     "@type": "PackagedComponent",
     "packageId": "1a0daa6d-42cf-4b46-93ac-ce0ce7b92c82",
     "packageVersion": "1.5",
@@ -12,3 +12,4 @@
     "shareable": false,
     "fullyPubliclyConsumable": false
 }
+]
