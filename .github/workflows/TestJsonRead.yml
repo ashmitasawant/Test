@@ -12,6 +12,6 @@ jobs:
     - id: set-matrix
       run: |
         JSON=$(cat ./jsonArray.json)
-         echo $JSON | jq '.[].name'
+         echo $JSON | jq '.[].packageId'
 
  
