@@ -27,14 +27,16 @@ jobs:
       id: myRequest
       uses: satak/webrequest-action@master
       with:
-          url: 'https://api.boomi.com/api/rest/v1/neosalpha-SSL1AK/Atom/query'
+          url: 'https://api.boomi.com/api/rest/v1/neosalpha-SSL1AK/PackagedComponent'
           method: POST
-          payload: '{"QueryFilter" : {"expression" :{"argument" : ["ATOM"], "operator" : "EQUALS", "property" : "type"}}}'
+          payload: '{"componentId": "0a558e5f-69f2-460b-95e3-fe5ba308b1e7","packageVersion":"1.22", "notes":"Package for deployment" }'
           headers: '{"Accept": "application/json", "Content-Type":"application/json"}'
           username: ${{env.BOOMI_USERNAME}}
           password: ${{env.BOOMI_PASSWORD}}
-          
+    - name: Show Response  
       run: |
            $output = '${{ steps.myRequest.outputs.output }}' | ConvertFrom-Json
+           echo $($output.packageId)
+           
         
  
