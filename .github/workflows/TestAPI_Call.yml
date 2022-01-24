@@ -35,7 +35,7 @@ jobs:
           password: ${{env.BOOMI_PASSWORD}}
     - name: Show Response  
       run: |
-           $output = '${{ steps.myRequest.outputs.output }}' | ConvertFrom-Json
+           $output = '${{ steps.myRequest.outputs.output }}' | ConvertTo-Json
            echo $($output.packageId)
            
         
