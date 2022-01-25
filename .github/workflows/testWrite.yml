@@ -18,9 +18,4 @@ jobs:
     steps:
      - uses: actions/checkout@v2
      - name: Write File 
-       uses: DamianReeves/write-file-action@v1.0
-       with: 
-        path: ./Test/ProcessDetails_CSV.txt
-        contents: |
-                 echo "Hello World!"
-        write-mode: append
+       run: echo "All" >> ./ProcessDetails_CSV.txt
