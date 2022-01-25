@@ -18,8 +18,9 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: Print Hello
-      uses: actions/checkout@v2
+    - uses: actions/checkout@v2
+      with:
+          path: './ProcessDetails_CSV.txt'
     - id: printHello
-      run: |
-           ProcessDetails=$(echo "Ashmita" >> ./ProcessDetails_CSV.txt)
-           echo $ProcessDetails
+    - run: echo "123" > ./ProcessDetails_CSV.txt
+           
