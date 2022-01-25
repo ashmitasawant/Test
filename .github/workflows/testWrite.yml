@@ -18,4 +18,6 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: Print Hello
+      uses: actions/checkout@v2
+    - id: printHello
       run: (echo "Hello" >> ./ProcessDetails_CSV.txt)
