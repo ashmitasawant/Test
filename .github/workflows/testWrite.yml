@@ -16,12 +16,11 @@ jobs:
     runs-on: ubuntu-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Runs a single command using the runners shell
-      
-    - uses: actions/write-to-file@v1.0 
+    - name: Write File
+      uses: DamianReeves/write-file-action@v1.0
       with: 
-       filepath: ./ProcessDetails_CSV.txt
-       content: hii 
-       mode: 0655
-       
+        path: https://github.com/ashmitasawant/Test/blob/4ea929167780c90e2d01272535d47c545a3c722f/ProcessDetails_CSV.txt
+        contents: |
+                 echo "Hello World!"
+        write-mode: append
 
