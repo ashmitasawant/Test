@@ -20,5 +20,5 @@ jobs:
         uses: actions/checkout@v2
       - run: |
           touch .ProcessDetails_CSV.txt
-          echo "All" >> ProcessDetails_CSV.txt
+          echo "All" >> .ProcessDetails_CSV.txt
           ls ${{ github.workspace }}
