@@ -22,8 +22,4 @@ jobs:
         env:
           AWS_HOST: "abc"
         run: |
-          touch .ProcessDetails_CSV.txt
-          echo aws_host="$AWS_HOST" >> .ProcessDetails_CSV.txt
-          ls ${{ github.workspace }}
-          echo "cat .ProcessDetails_CSV.txt"
           cat .ProcessDetails_CSV.txt
