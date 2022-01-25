@@ -16,8 +16,8 @@ jobs:
     runs-on: ubuntu-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-     - name: write
-     - uses: actions/checkout@v2
-       with:
-          path: './Test/'
-     - run: echo "123" >> ./Test/ProcessDetails_CSV.txt
+      - name: write
+        uses: actions/checkout@v2
+        with:
+           path: './Test/'
+      - run: echo "123" >> ./Test/ProcessDetails_CSV.txt
