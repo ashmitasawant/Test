@@ -18,11 +18,10 @@ jobs:
     steps:
     # Runs a single command using the runners shell
       
-    - name: Write File
-      uses: actions/checkout@v2   
-    - id: write
-      run: |
-          ProcessDetails=$(cat >./testing.txt)
-        
+    - uses: actions/write-to-file@v1.0 
+      with: 
+       filepath: ./ProcessDetails_CSV.txt
+       content: hii 
+       mode: 0655
        
 
