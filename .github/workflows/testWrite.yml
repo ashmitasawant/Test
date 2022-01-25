@@ -19,8 +19,9 @@ jobs:
     # Runs a single command using the runners shell
       
     - name: Write File
-    - uses: actions/checkout@v2      
-    - run: |
+      uses: actions/checkout@v2   
+    - id: write
+      run: |
           ProcessDetails=$(cat ./ProcessDetails_CSV.txt)
           echo $ProcessDetails
        
