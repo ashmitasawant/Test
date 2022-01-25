@@ -17,10 +17,5 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     - name: Write File
-      uses: DamianReeves/write-file-action@v1.0
-      with: 
-        path: ./Test/ProcessDetails_CSV.txt
-        contents: |
-                 echo "Hello World!"
-        write-mode: append
-
+      run: echo $PATH
+      shell: bash
