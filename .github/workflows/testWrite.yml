@@ -19,7 +19,7 @@ jobs:
     - name: Write File
       uses: DamianReeves/write-file-action@v1.0
       with: 
-        path: https://github.com/ashmitasawant/Test/blob/4ea929167780c90e2d01272535d47c545a3c722f/ProcessDetails_CSV.txt
+        path: ./Test/ProcessDetails_CSV.txt
         contents: |
                  echo "Hello World!"
         write-mode: append
