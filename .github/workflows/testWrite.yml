@@ -18,6 +18,7 @@ jobs:
     steps:
       - name: write
         uses: actions/checkout@v2
-        with:
-           path: './Test/'
-      - run: echo "123" >> ./Test/ProcessDetails_CSV.txt
+      - run: |
+          touch .ProcessDetails_CSV.txt
+          echo "All" >> ProcessDetails_CSV.txt
+          ls ${{ github.workspace }}
