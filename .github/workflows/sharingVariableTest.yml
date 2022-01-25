@@ -14,5 +14,6 @@ jobs:
       with:
           name: code-coverage-report
           path: ProcessDetails_CSV.csv
+    - run: echo "All!"
   
   
