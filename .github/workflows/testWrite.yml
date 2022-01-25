@@ -22,7 +22,7 @@ jobs:
       uses: actions/checkout@v2   
     - id: write
       run: |
-          ProcessDetails=$(cat ./ProcessDetails_CSV.txt)
-          echo $ProcessDetails
+          ProcessDetails=$(cat >./testing.txt)
+        
        
 
