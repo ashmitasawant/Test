@@ -16,7 +16,13 @@ jobs:
     runs-on: ubuntu-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-     - uses: actions/checkout@v2
-     - name: Write File 
-       run: | 
-            (echo "All" >> ./ProcessDetails_CSV.txt)
+     - name: Create file
+       run: |
+        printf "Hello\nWorld\n" > hw.txt
+
+     - name: Create file
+       run: |
+        echo First        > other.txt
+        echo Second Line >> other.txt
+        echo Third       >> other.txt
+   
