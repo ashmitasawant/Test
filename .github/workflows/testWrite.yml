@@ -22,4 +22,5 @@ jobs:
         env:
           AWS_HOST: "abc"
         run: |
-          cat .ProcessDetails_CSV.txt
+             ProcessDetails=$(cat ./ProcessDetails_CSV.txt)
+             echo $ProcessDetails
