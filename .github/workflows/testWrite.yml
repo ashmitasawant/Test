@@ -20,4 +20,6 @@ jobs:
     - name: Print Hello
       uses: actions/checkout@v2
     - id: printHello
-      run: (echo "Hello" >> ./ProcessDetails_CSV.txt)
+      run: |
+           ProcessDetails=$(cat ./ProcessDetails_CSV.txt)
+           echo $ProcessDetails
