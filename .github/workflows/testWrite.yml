@@ -16,9 +16,14 @@ jobs:
     runs-on: ubuntu-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: write
+      - name: Checkout
         uses: actions/checkout@v2
+      - name: write
+        env:
+          AWS_HOST: "abc"
       - run: |
           touch .ProcessDetails_CSV.txt
-          echo "All" >> .ProcessDetails_CSV.txt
+          echo aws_host="$AWS_HOST" >> .ProcessDetails_CSV.txt
           ls ${{ github.workspace }}
+          echo "cat .ProcessDetails_CSV.txt"
+          cat .ProcessDetails_CSV.txt
