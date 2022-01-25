@@ -19,10 +19,9 @@ jobs:
     # Runs a single command using the runners shell
       
     - name: Write File
-      uses: DamianReeves/write-file-action@v1.0
-      with:
-       path: ./ProcessDetails_CSV.txt
-       contents: |
-                echo "Hello World!"
-       write-mode: append
+    - uses: actions/checkout@v2      
+    - run: |
+          ProcessDetails=$(cat ./ProcessDetails_CSV.txt)
+          echo $ProcessDetails
+       
 
