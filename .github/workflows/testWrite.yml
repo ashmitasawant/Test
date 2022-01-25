@@ -18,4 +18,4 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: Print Hello
-      run: echo "Hello" | tee ProcessDetails_CSV.csv
+      run: (echo "Hello" >> ./ProcessDetails_CSV.txt)
