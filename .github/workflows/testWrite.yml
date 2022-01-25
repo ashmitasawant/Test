@@ -17,5 +17,5 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     - name: Write File
-      run: ls ./home
+      run: ls 
       shell: bash
