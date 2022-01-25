@@ -8,5 +8,7 @@ jobs:
     
     steps:
     - id: step1
-      run: (echo "Hiii" > ProcessDetails_CSV.csv)
+      run: |
+           echo $(cat > ./ProcessDetails.csv)
+           
   
