@@ -9,13 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Step 1 - Create a temporary artifact downloads folder
-        run: mkdir fileWrite
-      - name: step 2 - Add artifacts to publish to the temp folder
-        run: |
-          cd fileWrite
-          echo 'alpha'    > alpha.txt
+   
       - name: display content
-        run: |
-              content=$(cat ./alpha.txt)
-              echo $content
+        run:  echo 'alpha'    > ./jsonArray.txt
