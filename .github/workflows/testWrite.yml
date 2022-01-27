@@ -16,3 +16,4 @@ jobs:
                this
                is 
                EOF
+               cat jsonArray.txt
