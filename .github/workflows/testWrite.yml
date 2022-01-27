@@ -12,4 +12,7 @@ jobs:
    
       - name: display content
         run:  |
-               echo "All" >> ./home/runner/work/Test/jsonArray.txt
+               cat > jsonArray.txt << EOF
+               this
+               is 
+               EOF
