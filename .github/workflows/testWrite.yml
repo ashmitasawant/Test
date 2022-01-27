@@ -15,3 +15,4 @@ jobs:
                ls
                mkdir fileWrite
                ls
+               pwd
