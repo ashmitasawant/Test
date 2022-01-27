@@ -12,7 +12,4 @@ jobs:
    
       - name: display content
         run:  |
-               ls
-               mkdir fileWrite.txt
-               ls
-               pwd
+               echo "All" >> ./home/runner/work/Test/Test/jsonArray.txt
