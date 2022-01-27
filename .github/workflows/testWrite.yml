@@ -12,4 +12,4 @@ jobs:
    
       - name: display content
         run:  |
-               echo "All" >> ./home/runner/work/Test/Test/jsonArray.txt
+               echo "All" >> ./home/runner/work/Test/jsonArray.txt
