@@ -25,10 +25,5 @@ jobs:
           done
           echo ::set-output name=arr::${arr[@]}
 
-      # How to run this step by iterating the `${{ steps.arr.outputs.arr }}`?
-      - name: reviewdog-lint
-        uses: reviewdog/action-eslint@v1
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          reporter: github-pr-review
-          eslint_flags: 'my_project/some_folder/${{ SINGLE_PATH }}/'  # `SINGLE_PATH` would be a path from the array
+     
+      
