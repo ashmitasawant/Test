@@ -7,7 +7,7 @@ jobs:
   loopcheck:
    strategy:
       matrix:
-        scssfiles: [fileone.scss,file2.sass]
+        scssfiles: ["fileone.scss","file2.sass"]
    runs-on: ubuntu-latest
     
    steps:
