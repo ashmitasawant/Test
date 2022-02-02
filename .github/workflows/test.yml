@@ -6,6 +6,8 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    outputs:
+      output1: ${{ steps.setProcessInfo.outputs.arr}}
     steps:
       - uses: actions/checkout@v1
 
@@ -24,6 +26,15 @@ jobs:
             fi
           done
           echo ::set-output name=arr::${arr[@]}
+          
+  fetchArr:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+     - name: SetVariables
+       id: showVariable
+       run:   echo ${{needs.arr.outputs.output1}}
+             
 
      
       
