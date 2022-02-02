@@ -33,7 +33,7 @@ jobs:
     steps:
      - name: SetVariables
        id: showVariable
-       run:   echo ${{needs.arr.outputs.output1}}
+       run:   echo ${{needs.test.outputs.output1}}
              
 
      
