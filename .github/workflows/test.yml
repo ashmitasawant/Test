@@ -6,35 +6,14 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    outputs:
-      output1: ${{ steps.setProcessInfo.outputs.arr}}
+    strategy:
+      matrix:
+        node: [10, 12, 14]
     steps:
-      - uses: actions/checkout@v1
-
-      # This step will create "an array" of strings, e.g. "path1 path2 path3"
-      - name: array
-        id: arr
-        run: |
-          arr=()
-          for i in "$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }})"
-          do
-            if [[ $i == *"path1"* ]]; then
-              arr+=("path1")
-            fi
-            if [[ $i == *"path2"* ]]; then
-              arr+=("path2")
-            fi
-          done
-          echo ::set-output name=arr::${arr[@]}
-          
-  fetchArr:
-    runs-on: ubuntu-latest
-    needs: test
-    steps:
-     - name: SetVariables
-       id: showVariable
-       run:   echo ${{needs.test.outputs.output1}}
-             
-
+      # Configures the node version used on GitHub-hosted runners
+      - uses: actions/setup-node@v2
+        with:
+          # The Node.js version to configure
+          node-version: ${{ matrix.node }}
      
       
